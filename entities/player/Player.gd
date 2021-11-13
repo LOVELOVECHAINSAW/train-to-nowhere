@@ -1,27 +1,30 @@
 extends KinematicBody2D
 
 enum FACING {
-	UP, DOWN, LEFT, RIGHT
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT
 }
 
 enum STATE {
 	SITTING,
 	STANDING,
-	TALKING
+	TALKING,
 	IDLE
 }
 
 const WALK_SPEED = 300
 
-var facing = FACING.UP
-var state = STATE.SITTING
-var velocity = Vector2.ZERO
-var animation = ""
+var facing: int = FACING.UP
+var state: int = STATE.SITTING
+var velocity := Vector2.ZERO
+var animation: String
 var held_item
-var dropping_item = false
-var hovering_over = []
+var dropping_item := false
+var hovering_over: Array = []
 
-func on_item_clicked(item):
+func on_item_clicked(item) -> void:
 	held_item = item
 	$Item.visible = true
 
@@ -41,7 +44,7 @@ func _input(event):
 
 		_drop_item(mouse_position)
 
-func _drop_item(position):
+func _drop_item(position) -> void:
 	dropping_item = true
 	var item_name = Item.TYPE.keys()[held_item]
 	var item_instance = load("res://entities/items/" + item_name + ".tscn").instance()
@@ -54,12 +57,33 @@ func _drop_item(position):
 	yield(get_tree().create_timer(0.1), "timeout")
 	dropping_item = false
 
-func _process(delta):
+func _process(delta) -> void:
 	$DebugText.text = STATE.keys()[state]
 
-func _on_animation_finished(anim_name:String):
-	if anim_name == "standing_up":
+func _on_animation_finished(anim_name: String) -> void:
+	if anim_name == "standing_up": # What ?
 		self.state = STATE.IDLE
+
+func set_velocity() -> void:
+	velocity.x = Input.get_action_strength("ui_right") -\
+			Input.get_action_strength("ui_left")
+	velocity.y = Input.get_action_strength("ui_down") -\
+			Input.get_action_strength("ui_up")
+
+	velocity = velocity.normalized() * WALK_SPEED
+
+func set_animation() -> void:
+	match velocity:
+		Vector2.UP:
+			animation = "walk_up"
+		Vector2.DOWN:
+			animation = "walk_down"
+		Vector2.LEFT:
+			animation = "walk_left"
+		Vector2.RIGHT:
+			animation = "walk_right"
+		_:
+			animation = "" # We can give a proper animation name later
 
 func _physics_process(delta):
 	if (
@@ -68,34 +92,15 @@ func _physics_process(delta):
 	):
 		return
 
-	var speed = Vector2.ZERO
+	set_velocity()
+	move_and_slide(velocity)
 
-	if Input.is_action_pressed("ui_down"):
-		speed += Vector2.DOWN
-	if Input.is_action_pressed("ui_left"):
-		speed += Vector2.LEFT
-	if Input.is_action_pressed("ui_right"):
-		speed += Vector2.RIGHT
-	if Input.is_action_pressed("ui_up"):
-		speed += Vector2.UP
-
-	if speed.length() > 0 and self.state == STATE.SITTING:
+	set_animation()
+	# To be fixed later
+	if velocity != Vector2.ZERO and self.state == STATE.SITTING:
 		$AnimationPlayer.play("standing_up")
 		self.state = STATE.STANDING
 		return
 
-	var new_animation = (
-		"walk_right" if speed.x > 0 else
-		"walk_left"  if speed.x < 0 else
-		"walk_down"  if speed.y > 0 else
-		"walk_up"    if speed.y < 0 else
-		""
-	)
-
-	speed *= WALK_SPEED
-	velocity = speed
-
-	move_and_slide(velocity)
-
-	if $AnimationPlayer.current_animation != new_animation:
-		$AnimationPlayer.play(new_animation)
+	if $AnimationPlayer.current_animation != animation:
+		$AnimationPlayer.play(animation)
