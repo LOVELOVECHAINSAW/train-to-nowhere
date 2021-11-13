@@ -36,20 +36,25 @@ func _input(event):
 		var mouse_position = get_global_mouse_position()
 		if self.global_position.distance_to(mouse_position) > 150:
 			return
+
+		if state == STATE.TALKING:
+			return
+		for value in hovering_over:
+			if value is Character or value is Item:
+				return
+
 		_drop_item(mouse_position)
 
 func _drop_item(position):
-	if state == STATE.TALKING:
-		return
-	for value in hovering_over:
-		if value is Character:
-			return
 	dropping_item = true
-	var item_instance = preload("res://entities/items/Item.tscn").instance()
+	var item_name = Item.TYPE.keys()[held_item]
+	var item_instance = load("res://entities/items/" + item_name + ".tscn").instance()
+	item_instance.type = held_item
 	item_instance.global_position = position
 	get_tree().current_scene.add_child(item_instance)
 	held_item = null
 	$Item.visible = false
+
 	yield(get_tree().create_timer(0.1), "timeout")
 	dropping_item = false
 
@@ -98,7 +103,3 @@ func _physics_process(delta):
 
 	if $AnimationPlayer.current_animation != new_animation:
 		$AnimationPlayer.play(new_animation)
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

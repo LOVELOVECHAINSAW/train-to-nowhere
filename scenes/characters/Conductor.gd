@@ -1,9 +1,7 @@
-extends "res://scenes/characters/Character.gd"
+extends "res://scenes/Character.gd"
 
 func _get_dialog(item):
-	var dialog
-	if item == null:
-		dialog = Dialogic.start("Intro")
-	elif item == Item.TYPE.KEY:
+	var dialog =  Dialogic.start("Intro")
+	if item == Item.TYPE.Key:
 		dialog = Dialogic.start("Conductor Key")
 	return dialog

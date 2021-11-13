@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://entities/player/Player.gd" type="Script" id=1]
-[ext_resource path="res://entities/items/Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://entities/Item.tscn" type="PackedScene" id=2]
 
 [sub_resource type="GradientTexture" id=1]
 
@@ -15,7 +15,7 @@ tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray(  ),
 "transitions": PoolRealArray(  ),
@@ -70,6 +70,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 64.0
+method_call_mode = 1
 anims/standing_up = SubResource( 3 )
 anims/walk_down = SubResource( 4 )
 anims/walk_left = SubResource( 5 )
