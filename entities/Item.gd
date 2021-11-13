@@ -21,9 +21,8 @@ func _process(_delta):
 func on_combine(item_to_combine):
 	pass
 
-func on_dialog_end():
-	player.state = previous_player_state
-	pass
+func on_dialog_end(timeline):
+	player.state = self.previous_player_state
 
 func on_click():
 	if player.dropping_item:
@@ -40,10 +39,10 @@ func on_click():
 	queue_free()
 
 func handle_combine():
+	var dialog = on_combine(player.held_item)
+	dialog.connect("timeline_end", self, "on_dialog_end")
 	previous_player_state = player.state
 	player.state = player.STATE.TALKING
-	var dialog = on_combine(player.held_item)
-	dialog.connect("dialog_end", self, "on_dialog_end")
 	add_child(dialog)
 
 func _on_Area2D_mouse_entered():
