@@ -82,9 +82,8 @@ func _physics_process(delta):
 
 	move_and_slide(velocity)
 
-	# if $animation.current_animation != new_animation:
-	# 	$animation.play(new_animation)
-
+	if $AnimationPlayer.current_animation != new_animation:
+		$AnimationPlayer.play(new_animation)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

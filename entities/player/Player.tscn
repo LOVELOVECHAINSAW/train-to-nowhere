@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://entities/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://entities/items/Item.tscn" type="PackedScene" id=2]
@@ -22,6 +22,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [  ]
 }
+
+[sub_resource type="Animation" id=4]
+resource_name = "walk_down"
+
+[sub_resource type="Animation" id=5]
+resource_name = "walk_left"
+
+[sub_resource type="Animation" id=6]
+resource_name = "walk_right"
+
+[sub_resource type="Animation" id=7]
+resource_name = "walk_up"
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -59,6 +71,10 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/standing_up = SubResource( 3 )
+anims/walk_down = SubResource( 4 )
+anims/walk_left = SubResource( 5 )
+anims/walk_right = SubResource( 6 )
+anims/walk_up = SubResource( 7 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
 
