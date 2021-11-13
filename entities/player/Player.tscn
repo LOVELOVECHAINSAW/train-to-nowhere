@@ -6,7 +6,7 @@
 [sub_resource type="GradientTexture" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 78.5, 44 )
+extents = Vector2( 80, 45 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "standing_up"
