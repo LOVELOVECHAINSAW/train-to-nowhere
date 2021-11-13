@@ -9,12 +9,48 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "DTS",
+"language": "GDScript",
+"path": "res://addons/dialogic/Localization/translation_service.gd"
+}, {
+"base": "Node",
+"class": "Dialogic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicClass.gd"
+}, {
+"base": "Control",
+"class": "DialogicBackgroundMusic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
+}, {
+"base": "Node",
+"class": "DialogicDefinitionsUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
+}, {
+"base": "Reference",
+"class": "DialogicResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicResources.gd"
+}, {
+"base": "Reference",
+"class": "DialogicUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicUtil.gd"
+}, {
 "base": "Node",
 "class": "Item",
 "language": "GDScript",
 "path": "res://entities/items/Item.gd"
 } ]
 _global_script_class_icons={
+"DTS": "",
+"Dialogic": "",
+"DialogicBackgroundMusic": "",
+"DialogicDefinitionsUtil": "",
+"DialogicResources": "",
+"DialogicUtil": "",
 "Item": ""
 }
 
@@ -24,6 +60,10 @@ config/name="Train To Nowhere"
 run/main_scene="res://scenes/levels/Intro.tscn"
 run/flush_stdout_on_print=true
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
 
 [input]
 
