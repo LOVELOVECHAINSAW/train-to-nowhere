@@ -1,16 +1,23 @@
 extends Node
 
+onready var player = get_tree().current_scene.get_node("Player")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var previous_player_state
 
+func _get_dialog():
+	pass
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func on_dialog_end(event):
+	player.state = self.previous_player_state
 
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if player.state == player.STATE.TALKING:
+		return
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	if event is InputEventMouseButton:
+		if self.global_position.distance_to(player.global_position) < 150 and event.is_pressed():
+			var dialog = self._get_dialog()
+			dialog.connect("timeline_end", self, "on_dialog_end")
+			previous_player_state = player.state
+			player.state = player.STATE.TALKING
+			add_child(dialog)

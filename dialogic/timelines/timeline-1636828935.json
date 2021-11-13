@@ -5,7 +5,7 @@
 			"character": "character-1636828905.json",
 			"event_id": "dialogic_002",
 			"mirror": false,
-			"portrait": "",
+			"portrait": "icon",
 			"position": {
 				"0": false,
 				"1": false,
@@ -17,7 +17,7 @@
 		{
 			"character": "character-1636828905.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "(Don't change)",
 			"text": "Welcome to the polar express!"
 		}
 	],

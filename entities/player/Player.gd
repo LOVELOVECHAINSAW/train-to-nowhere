@@ -7,6 +7,7 @@ enum FACING {
 enum STATE {
 	SITTING,
 	STANDING,
+	TALKING
 	IDLE
 }
 
@@ -50,7 +51,10 @@ func _on_animation_finished(anim_name:String):
 		self.state = STATE.IDLE
 
 func _physics_process(delta):
-	if self.state == STATE.STANDING:
+	if (
+		self.state == STATE.STANDING or 
+		self.state == STATE.TALKING
+	):
 		return
 
 	var speed = Vector2.ZERO
