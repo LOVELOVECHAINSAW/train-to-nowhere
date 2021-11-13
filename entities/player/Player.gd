@@ -19,6 +19,7 @@ var velocity = Vector2.ZERO
 var animation = ""
 var held_item
 var dropping_item = false
+var hovering_over = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -38,6 +39,11 @@ func _input(event):
 		_drop_item(mouse_position)
 
 func _drop_item(position):
+	if state == STATE.TALKING:
+		return
+	for value in hovering_over:
+		if value is Character:
+			return
 	dropping_item = true
 	var item_instance = preload("res://entities/items/Item.tscn").instance()
 	item_instance.global_position = position

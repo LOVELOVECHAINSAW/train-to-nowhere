@@ -8,7 +8,7 @@ var previous_player_state
 var mouse_hovering = false
 
 # Override in child class
-func _get_dialog():
+func _get_dialog(item):
 	pass
 
 func on_dialog_end(event):
@@ -25,7 +25,7 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 
 	if event is InputEventMouseButton:
 		if self.global_position.distance_to(player.global_position) < 150 and event.is_pressed():
-			var dialog = self._get_dialog()
+			var dialog = self._get_dialog(player.held_item)
 			dialog.connect("timeline_end", self, "on_dialog_end")
 			previous_player_state = player.state
 			player.state = player.STATE.TALKING
@@ -33,7 +33,10 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 
 func _on_mouse_entered():
 	mouse_hovering = true
+	player.hovering_over.push_front(self)
 
 func _on_mouse_exited():
 	mouse_hovering = false
+	var where = player.hovering_over.find(self)
+	player.hovering_over.remove(where)
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)

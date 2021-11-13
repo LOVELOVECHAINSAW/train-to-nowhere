@@ -7,6 +7,7 @@ enum TYPE {
 }
 
 onready var player = get_tree().current_scene.get_node("Player")
+var type = TYPE.KEY
 var mouse_hovering = false
 
 func _process(_delta):
@@ -17,7 +18,7 @@ func _process(_delta):
 func on_click():
 	if (player.dropping_item):
 		return
-	player.on_item_clicked(self)
+	player.on_item_clicked(self.type)
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 	queue_free()
 
