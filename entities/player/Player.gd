@@ -21,10 +21,6 @@ var held_item
 var dropping_item = false
 var hovering_over = []
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 func on_item_clicked(item):
 	held_item = item
 	$Item.visible = true
@@ -67,7 +63,7 @@ func _on_animation_finished(anim_name:String):
 
 func _physics_process(delta):
 	if (
-		self.state == STATE.STANDING or 
+		self.state == STATE.STANDING or
 		self.state == STATE.TALKING
 	):
 		return
@@ -92,7 +88,7 @@ func _physics_process(delta):
 		"walk_right" if speed.x > 0 else
 		"walk_left"  if speed.x < 0 else
 		"walk_down"  if speed.y > 0 else
-		"walk_up"    if speed.y < 0 else 
+		"walk_up"    if speed.y < 0 else
 		""
 	)
 
