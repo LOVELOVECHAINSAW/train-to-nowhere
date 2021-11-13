@@ -24,7 +24,7 @@ func on_hover():
 	if self.position.distance_to(player_position) < 150:
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
 
-		if Input.is_action_pressed("ui_mouse_click"):
+		if Input.is_action_just_pressed("ui_mouse_click"):
 			on_click()
 	else:
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)

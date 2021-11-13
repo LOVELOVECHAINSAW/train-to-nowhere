@@ -6,7 +6,8 @@ enum FACING {
 
 enum STATE {
 	SITTING,
-	STANDING
+	STANDING,
+	IDLE
 }
 
 const WALK_SPEED = 300
@@ -41,7 +42,17 @@ func _drop_item(position):
 	held_item = null
 	$Item.visible = false
 
+func _process(delta):
+	$DebugText.text = STATE.keys()[state]
+
+func _on_animation_finished(anim_name:String):
+	if anim_name == "standing_up":
+		self.state = STATE.IDLE
+
 func _physics_process(delta):
+	if self.state == STATE.STANDING:
+		return
+
 	var speed = Vector2.ZERO
 
 	if Input.is_action_pressed("ui_down"):
@@ -52,6 +63,11 @@ func _physics_process(delta):
 		speed += Vector2.RIGHT
 	if Input.is_action_pressed("ui_up"):
 		speed += Vector2.UP
+
+	if speed.length() > 0 and self.state == STATE.SITTING:
+		$AnimationPlayer.play("standing_up")
+		self.state = STATE.STANDING
+		return
 
 	var new_animation = (
 		"walk_right" if speed.x > 0 else

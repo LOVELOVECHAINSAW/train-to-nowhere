@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entities/player/Player.gd" type="Script" id=1]
 [ext_resource path="res://entities/items/Item.tscn" type="PackedScene" id=2]
@@ -7,6 +7,21 @@
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 78.5, 44 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "standing_up"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -31,5 +46,20 @@ script = null
 
 [node name="Area2D" parent="Item" index="2"]
 visible = false
+
+[node name="DebugText" type="RichTextLabel" parent="."]
+margin_left = -56.0
+margin_top = -16.0
+margin_right = 40.0
+margin_bottom = 33.0
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/standing_up = SubResource( 3 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
 
 [editable path="Item"]
