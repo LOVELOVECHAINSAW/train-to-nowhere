@@ -28,7 +28,7 @@ func on_item_clicked(item) -> void:
 	held_item = item
 	$Item.visible = true
 
-func _input(event):
+func _input(event) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if held_item == null:
 			return
@@ -57,8 +57,28 @@ func _drop_item(position) -> void:
 	yield(get_tree().create_timer(0.1), "timeout")
 	dropping_item = false
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	$DebugText.text = STATE.keys()[state]
+
+func _physics_process(_delta) -> void:
+	if (
+		self.state == STATE.STANDING or
+		self.state == STATE.TALKING
+	):
+		return
+
+	set_velocity()
+	move_and_slide(velocity)
+
+	set_animation()
+	# To be fixed later
+	if velocity != Vector2.ZERO and self.state == STATE.SITTING:
+		$AnimationPlayer.play("standing_up")
+		self.state = STATE.STANDING
+		return
+
+	if $AnimationPlayer.current_animation != animation:
+		$AnimationPlayer.play(animation)
 
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_name == "standing_up": # What ?
@@ -84,23 +104,3 @@ func set_animation() -> void:
 			animation = "walk_right"
 		_:
 			animation = "" # We can give a proper animation name later
-
-func _physics_process(delta):
-	if (
-		self.state == STATE.STANDING or
-		self.state == STATE.TALKING
-	):
-		return
-
-	set_velocity()
-	move_and_slide(velocity)
-
-	set_animation()
-	# To be fixed later
-	if velocity != Vector2.ZERO and self.state == STATE.SITTING:
-		$AnimationPlayer.play("standing_up")
-		self.state = STATE.STANDING
-		return
-
-	if $AnimationPlayer.current_animation != animation:
-		$AnimationPlayer.play(animation)
