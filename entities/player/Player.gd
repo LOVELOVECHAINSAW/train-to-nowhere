@@ -18,6 +18,7 @@ var state = STATE.SITTING
 var velocity = Vector2.ZERO
 var animation = ""
 var held_item
+var dropping_item = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,11 +38,14 @@ func _input(event):
 		_drop_item(mouse_position)
 
 func _drop_item(position):
+	dropping_item = true
 	var item_instance = preload("res://entities/items/Item.tscn").instance()
 	item_instance.global_position = position
 	get_tree().current_scene.add_child(item_instance)
 	held_item = null
 	$Item.visible = false
+	yield(get_tree().create_timer(0.1), "timeout")
+	dropping_item = false
 
 func _process(delta):
 	$DebugText.text = STATE.keys()[state]
