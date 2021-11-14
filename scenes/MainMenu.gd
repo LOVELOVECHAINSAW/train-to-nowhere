@@ -1,7 +1,7 @@
-extends MarginContainer
+extends Control
 
-var scene: Resource = preload("res://scenes/levels/Level1.tscn")
+var scene: Resource = preload("res://scenes/Car1.tscn")
 
-func _on_Button_pressed() -> void:
-# warning-ignore:return_value_discarded
-	get_tree().change_scene_to(scene)
+func _unhandled_key_input(event):
+	if event.scancode > 47 and event.scancode < 91: # If the key is a number or a letter
+		get_tree().change_scene_to(scene)

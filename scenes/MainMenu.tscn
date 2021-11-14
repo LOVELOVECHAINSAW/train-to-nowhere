@@ -1,41 +1,139 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/GameGirl.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scenes/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://assets/MenuStart.png" type="Texture" id=3]
+[ext_resource path="res://assets/MenuBG.png" type="Texture" id=4]
+[ext_resource path="res://assets/MenuTitle.png" type="Texture" id=5]
+[ext_resource path="res://assets/MenuTrain2.png" type="Texture" id=6]
+[ext_resource path="res://assets/MenuTrain1.png" type="Texture" id=7]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
 /fonts/Default = null
 
-[node name="MainMenu" type="MarginContainer"]
+[sub_resource type="AnimatedTexture" id=2]
+frames = 2
+frame_0/texture = ExtResource( 7 )
+frame_1/texture = ExtResource( 6 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 460, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Start:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "menu"
+length = 6.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Title:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.01, 3, 6 ),
+"transitions": PoolRealArray( 1, 2, 0.5 ),
+"update": 0,
+"values": [ Vector2( 460, 30 ), Vector2( 460, 55 ), Vector2( 460, 30 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Start:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5 ),
+"transitions": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ) ]
+}
+
+[node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+__meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 1920.0
-margin_bottom = 1080.0
+[node name="Train" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -794.0
+margin_top = 24.0
+margin_right = 822.0
+margin_bottom = 312.0
+texture = SubResource( 2 )
+stretch_mode = 5
 
-[node name="Label" type="Label" parent="VBoxContainer"]
-margin_left = 384.0
-margin_top = 471.0
-margin_right = 1536.0
-margin_bottom = 538.0
-size_flags_horizontal = 4
-size_flags_vertical = 10
-text = "A Train to Nowhere"
+[node name="Title" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -500.0
+margin_right = 500.0
+margin_bottom = 477.0
+texture = ExtResource( 5 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_left = 794.0
-margin_top = 542.0
-margin_right = 1126.0
-margin_bottom = 615.0
-size_flags_horizontal = 4
-size_flags_vertical = 2
-text = "Start"
+[node name="Start" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -392.0
+margin_top = -210.0
+margin_right = 392.0
+margin_bottom = -130.0
+texture = ExtResource( 3 )
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "menu"
+anims/RESET = SubResource( 3 )
+anims/menu = SubResource( 4 )
