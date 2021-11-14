@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-const WALK_SPEED = 300
+const WALK_SPEED = 50
 
 onready var held_position: Vector2 = $HeldPosition.position
 
 var velocity := Vector2.ZERO
-var animation: String
+var animation: String = "idle"
 var item: Node setget set_item
 
 func _unhandled_key_input(_event) -> void:
@@ -26,13 +26,11 @@ func _drop_item() -> void:
 func _physics_process(_delta) -> void:
 	set_velocity()
 # warning-ignore:return_value_discarded
-	move_and_slide(velocity)
+	move_and_slide(velocity.normalized() * WALK_SPEED)
 
 	set_animation()
 
-	# Will probably be changed later.
-	if $AnimationPlayer.current_animation != animation:
-		$AnimationPlayer.play(animation)
+	$AnimationPlayer.play(animation)
 
 func set_velocity() -> void:
 	velocity.x = Input.get_action_strength("ui_right") -\
@@ -40,20 +38,24 @@ func set_velocity() -> void:
 	velocity.y = Input.get_action_strength("ui_down") -\
 			Input.get_action_strength("ui_up")
 
-	velocity = velocity.normalized() * WALK_SPEED
-
 func set_animation() -> void:
 	match velocity:
-		Vector2.UP:
-			animation = "walk_up"
-		Vector2.DOWN:
-			animation = "walk_down"
 		Vector2.LEFT:
-			animation = "walk_left"
+			$Sprite.flip_h = true
 		Vector2.RIGHT:
-			animation = "walk_right"
-		_:
-			animation = "" # We can give a proper animation name later
+			$Sprite.flip_h = false
+	
+	if velocity != Vector2.ZERO:
+		animation = "walk"
+	else:
+		animation = "idle"
+	
+	if item:
+		match animation:
+			"walk":
+				animation = "walk_hold"
+			"idle":
+				animation = "idle_hold"
 
 func set_item(new_item: Node) -> void:
 	if item:

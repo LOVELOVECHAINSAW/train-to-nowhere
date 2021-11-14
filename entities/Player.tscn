@@ -1,13 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://entities/Player.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/CharacterSheet.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 7, 7 )
+extents = Vector2( 4, 3 )
 
 [sub_resource type="Animation" id=3]
-resource_name = "standing_up"
+resource_name = "idle"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -15,36 +15,69 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
 }
 
 [sub_resource type="Animation" id=4]
-resource_name = "walk_down"
+resource_name = "idle_hold"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
 
 [sub_resource type="Animation" id=5]
-resource_name = "walk_left"
+resource_name = "walk"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
 
 [sub_resource type="Animation" id=6]
-resource_name = "walk_right"
+resource_name = "walk_hold"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 3, 2 ]
+}
 
-[sub_resource type="Animation" id=7]
-resource_name = "walk_up"
-
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1.90735e-06, 4.76837e-07 )
-scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+position = Vector2( 0, -9 )
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -52,13 +85,18 @@ shape = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 64.0
 method_call_mode = 1
-anims/standing_up = SubResource( 3 )
-anims/walk_down = SubResource( 4 )
-anims/walk_left = SubResource( 5 )
-anims/walk_right = SubResource( 6 )
-anims/walk_up = SubResource( 7 )
+anims/idle = SubResource( 3 )
+anims/idle_hold = SubResource( 4 )
+anims/walk = SubResource( 5 )
+anims/walk_hold = SubResource( 6 )
 
 [node name="HeldPosition" type="Position2D" parent="."]
-position = Vector2( 0, -16 )
+position = Vector2( 0, -20 )
 
 [node name="HeldItems" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.1, 0.1 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true

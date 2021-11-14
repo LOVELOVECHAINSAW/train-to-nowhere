@@ -1,8 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/Background1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Car1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Car1-front.png" type="Texture" id=4]
+[ext_resource path="res://entities/Item.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 126, 11 )
@@ -98,7 +100,7 @@ tracks/0/keys = {
 
 [node name="Environment" type="Node2D" parent="Gameplay"]
 
-[node name="Car1" type="Sprite" parent="Gameplay/Environment"]
+[node name="Car" type="Sprite" parent="Gameplay/Environment"]
 position = Vector2( 0, 7 )
 texture = ExtResource( 3 )
 
@@ -160,8 +162,17 @@ shape = SubResource( 12 )
 position = Vector2( 108, 39 )
 shape = SubResource( 12 )
 
-[node name="Player" parent="Gameplay/Environment/Walls/CollisionShape2D14" instance=ExtResource( 1 )]
-position = Vector2( -196, -24 )
+[node name="Entities" type="Node2D" parent="Gameplay/Environment"]
+
+[node name="Player" parent="Gameplay/Environment/Entities" instance=ExtResource( 1 )]
+position = Vector2( -88, 15 )
+
+[node name="Item" parent="Gameplay/Environment/Entities" instance=ExtResource( 5 )]
+position = Vector2( -27, 15 )
+
+[node name="CarFront" type="Sprite" parent="Gameplay/Environment"]
+position = Vector2( 0, 47 )
+texture = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="Gameplay"]
 current = true
