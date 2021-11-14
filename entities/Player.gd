@@ -8,7 +8,7 @@ var velocity := Vector2.ZERO
 var animation: String
 var item: Node setget set_item
 
-func _unhandled_key_input(_event):
+func _unhandled_key_input(_event) -> void:
 	if Input.is_action_just_pressed("ui_accept") and item:
 		_drop_item()
 

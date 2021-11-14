@@ -6,7 +6,7 @@ export(rooms) onready var leads_to: int
 export(bool) var locked: bool
 
 
-func _on_Door_body_entered(_body):
+func _on_Door_body_entered(_body) -> void:
 	if locked:
 		print("Locked")
 	else:

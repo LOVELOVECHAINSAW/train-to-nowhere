@@ -4,14 +4,14 @@ onready var sprite: Sprite = $Sprite
 
 export(String) var id: String = ""
 
-func _on_Item_body_entered(body: Node):
+func _on_Item_body_entered(body: Node) -> void:
 	if body.is_in_group("player"):
 		disconnect("body_entered", self, "_on_Item_body_entered")
 		get_parent().call_deferred("remove_child", self)
 		body.set_item(self)
 
 
-func _on_Item_body_exited(_body):
+func _on_Item_body_exited(_body) -> void:
 # warning-ignore:return_value_discarded
 	connect("body_entered", self, "_on_Item_body_entered")
 	disconnect("body_exited", self, "_on_Item_body_exited")
