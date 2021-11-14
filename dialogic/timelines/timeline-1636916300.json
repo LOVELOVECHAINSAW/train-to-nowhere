@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636915610.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636915610.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't want him to go! University's important, but I just don't get why he has to leave us for it! The one in town's good!"
+		},
+		{
+			"character": "character-1636915610.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Maybe mom's cooking will persuade him..."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636916300.json",
+		"name": "Siblingadvice"
+	}
+}
