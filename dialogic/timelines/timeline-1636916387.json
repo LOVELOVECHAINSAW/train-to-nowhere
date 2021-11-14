@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636915611.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636915611.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Damnit, I know it's rough but he got into one of the best schools in the country. I don't want him to regret not going after the fact!"
+		},
+		{
+			"character": "character-1636915611.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I know it's petty and possibly low, but perhaps reminding him that his crush'll be there may work. I swear there was a picture of her somewhere..."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636916387.json",
+		"name": "Friendadvice"
+	}
+}

@@ -1,0 +1,72 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "nervous",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "W-w-why are t-they fighting? I-I'm no good with t-this kind of environment..."
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "confident",
+			"text": "Oh...! I didn't mean to ignore you, sorry. W-we offer everyone a snack for free on this train!"
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "confident",
+			"text": "Would you like to get one now? All we have are desserts though..."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": ""
+		},
+		{
+			"choice": "Don't mind if I do!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_timeline": "timeline-1636911767.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"choice": "I oughta cut back on sugar...",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636911506.json",
+		"name": "Shygirl1"
+	}
+}

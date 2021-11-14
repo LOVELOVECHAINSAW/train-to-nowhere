@@ -1,0 +1,65 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636914103.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": true,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636914103.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "P-please honey... I'm sooooorryyy...!"
+		},
+		{
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, not this time! I've had it with your nonsense! Forty years, FORTY years and I still hear about that damn newt!?"
+		},
+		{
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sigh... I need a break from you for a while."
+		},
+		{
+			"character": "character-1636914103.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, not agaiiiiin!!!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636913127.json",
+		"name": "Oldfartsfighting"
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636915612.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636915612.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't know where to go anymore..."
+		},
+		{
+			"character": "character-1636915612.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The city's university is amazing, and I got in!"
+		},
+		{
+			"character": "character-1636915612.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...but is it worth the cost of leaving my family behind? I mean there's a decent school in town and all..."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ugh, I can't decide!"
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636916201.json",
+		"name": "Studentintro"
+	}
+}

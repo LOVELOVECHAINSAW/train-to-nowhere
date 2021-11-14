@@ -1,0 +1,20 @@
+{
+	"color": "#ffa2a2a2",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1636915612.json",
+	"mirror_portraits": false,
+	"name": "Student",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100
+}

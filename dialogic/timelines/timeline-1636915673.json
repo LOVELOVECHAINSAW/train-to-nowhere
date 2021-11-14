@@ -1,0 +1,55 @@
+{
+	"events": [
+		{
+			"character": "character-1636828905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "...You've finally arrived at your seat, son."
+		},
+		{
+			"character": "character-1636828905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, sorry 'ta drop this on ya now, but your stop's already here."
+		},
+		{
+			"character": "character-1636828905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not like ya ever had the luxury of being able to sit and mull everything over."
+		},
+		{
+			"character": "character-1636828905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "None of the decisions ya made were easy; there weren't any right answers."
+		},
+		{
+			"character": "character-1636828905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Where to live, whether or not to love, what passion ya pursue... it all hits ya quick and ya gotta decide your direction."
+		},
+		{
+			"character": "character-1636828905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No point in regretting anything now. Yer direction's been set in stone. As long as ya have conviction you can make your path work."
+		},
+		{
+			"character": "character-1636828905.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks for ridin' with us son. See ya whenever... somewhere."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636915673.json",
+		"name": "Ending"
+	}
+}

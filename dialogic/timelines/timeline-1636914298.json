@@ -1,0 +1,56 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My husband’s totally worthless! I oughta find a real man…"
+		},
+		{
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "*sigh* he would dress brilliantly, perhaps with a nice red tie. Some flowers would be lovely too!"
+		},
+		{
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Really, anything red would be nice. Such a lively colour."
+		},
+		{
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Guess you could say I'll be single and *red*dy to mingle, hahaha!"
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636914298.json",
+		"name": "Obasan1"
+	}
+}
