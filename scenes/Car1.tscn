@@ -103,8 +103,16 @@ tracks/0/keys = {
 [node name="Car" type="Sprite" parent="Gameplay/Environment"]
 position = Vector2( 0, 7 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Walls" type="StaticBody2D" parent="Gameplay/Environment"]
+visible = false
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 0, -21.5 )
@@ -163,9 +171,12 @@ position = Vector2( 108, 39 )
 shape = SubResource( 12 )
 
 [node name="Entities" type="Node2D" parent="Gameplay/Environment"]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Player" parent="Gameplay/Environment/Entities" instance=ExtResource( 1 )]
-position = Vector2( -88, 15 )
+position = Vector2( -85, 18 )
 
 [node name="Item" parent="Gameplay/Environment/Entities" instance=ExtResource( 5 )]
 position = Vector2( -27, 15 )
@@ -173,6 +184,9 @@ position = Vector2( -27, 15 )
 [node name="CarFront" type="Sprite" parent="Gameplay/Environment"]
 position = Vector2( 0, 47 )
 texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Camera2D" type="Camera2D" parent="Gameplay"]
 current = true
