@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I won’t deny his brilliance in art, but artists cannot flourish without engineers and scientists supporting their work."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "From art supplies, art techniques and tools to all the infrastructure used to support them and others… I daresay without mathematics art ceases to exist."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636908352.json",
+		"name": "Dadpostbothtalk"
+	}
+}

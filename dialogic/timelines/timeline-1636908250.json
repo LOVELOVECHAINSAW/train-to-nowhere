@@ -1,0 +1,47 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636908106.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636908106.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh! How my son’s brilliance shines! Were he a bulb surely I would be blinded, yet eyes are not needed to bask in such light!"
+		},
+		{
+			"character": "character-1636908106.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "His artwork… were he not my son I daresay he had made a Faustian deal. He is one of few who can become a giant whose shoulders future artists stand upon! "
+		},
+		{
+			"character": "character-1636908106.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Such a gifted child must be allowed the opportunity of expression, of being able to master this craft!"
+		},
+		{
+			"character": "character-1636908106.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, he’s preparing to paint! He seems to be looking for a colour palette to use now. Perhaps he needs another to provide inspiration…"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636908250.json",
+		"name": "Momintro"
+	}
+}

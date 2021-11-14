@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636908106.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My husband sees his brilliance in art, yet chooses not to nurture it! How!? Out of misaligned priority for the material sciences!? Such a mindlessly pragmatic mindset shall slowly bleed the world dry of its beauty."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Art is what humanity strives towards! Those mathematicians, engineers and scientists; all pursue their fields because art inspired them. A world deprived of artists in favour of the sciences neither deserves nor shall receive either."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636908354.json",
+		"name": "Mompostbothtalk"
+	}
+}
