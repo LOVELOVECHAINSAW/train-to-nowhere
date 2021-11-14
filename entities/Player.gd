@@ -30,6 +30,7 @@ func _physics_process(_delta) -> void:
 
 	set_animation()
 
+	# Will probably be changed later.
 	if $AnimationPlayer.current_animation != animation:
 		$AnimationPlayer.play(animation)
 
