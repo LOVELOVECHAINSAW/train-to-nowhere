@@ -1,15 +1,16 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/Background1.png" type="Texture" id=2]
-[ext_resource path="res://assets/Car1.png" type="Texture" id=3]
-[ext_resource path="res://assets/Car1-front.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/Background1.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/Car1.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/Car1-front.png" type="Texture" id=4]
 [ext_resource path="res://entities/Item.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/Tracks.png" type="Texture" id=6]
-[ext_resource path="res://assets/Audio/creak2.ogg" type="AudioStream" id=7]
-[ext_resource path="res://assets/Audio/dropLeather.ogg" type="AudioStream" id=8]
-[ext_resource path="res://assets/Audio/beltHandle2.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/sprites/Tracks.png" type="Texture" id=6]
+[ext_resource path="res://assets/audio/creak2.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/audio/dropLeather.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/audio/beltHandle2.ogg" type="AudioStream" id=9]
 [ext_resource path="res://entities/Door.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Car1.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 126, 11 )
@@ -198,6 +199,7 @@ tracks/0/keys = {
 }
 
 [node name="Car1" type="Node"]
+script = ExtResource( 11 )
 
 [node name="Gameplay" type="Node2D" parent="."]
 
@@ -338,6 +340,8 @@ volume_db = -20.636
 autoplay = "shake"
 anims/RESET = SubResource( 3 )
 anims/shake = SubResource( 4 )
+
+[node name="Dialogue" type="CanvasLayer" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

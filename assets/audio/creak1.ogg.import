@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/creak1.ogg-326ff39780bdd9da75409246d2782948.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/creak1.ogg"
+dest_files=[ "res://.import/creak1.ogg-326ff39780bdd9da75409246d2782948.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

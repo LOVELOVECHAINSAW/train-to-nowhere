@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://entities/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/CharacterSheet.png" type="Texture" id=2]
-[ext_resource path="res://assets/Audio/footstep00.ogg" type="AudioStream" id=3]
-[ext_resource path="res://assets/Audio/footstep01.ogg" type="AudioStream" id=4]
-[ext_resource path="res://assets/Audio/bookClose.ogg" type="AudioStream" id=5]
-[ext_resource path="res://assets/Audio/bookPlace1.ogg" type="AudioStream" id=6]
+[ext_resource path="res://entities/scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/CharacterSheet.png" type="Texture" id=2]
+[ext_resource path="res://assets/audio/footstep00.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/footstep01.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/bookClose.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/bookPlace1.ogg" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 4, 3 )

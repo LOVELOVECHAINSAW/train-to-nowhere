@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/clothBelt2.ogg-aed9008eea7545a5be9f6aa6842b7c41.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/clothBelt2.ogg"
+dest_files=[ "res://.import/clothBelt2.ogg-aed9008eea7545a5be9f6aa6842b7c41.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
