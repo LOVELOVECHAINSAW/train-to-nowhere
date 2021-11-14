@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636914103.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636914103.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "She even put up with my smoking habit! I don't know why, maybe she liked the look?"
+		},
+		{
+			"character": "character-1636914103.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ohhhhh no now I remember the time my smoking yellowed that painting by Magritte she had..."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636915061.json",
+		"name": "Ojisan3"
+	}
+}

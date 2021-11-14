@@ -1,0 +1,43 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You know, my husband might be an idiot, but I still love him to bits."
+		},
+		{
+			"character": "character-1636914078.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I was too harsh, I should comfort him now. Not the first fight we had over 40 years after all!"
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636914459.json",
+		"name": "Obasanfinalsuccess"
+	}
+}

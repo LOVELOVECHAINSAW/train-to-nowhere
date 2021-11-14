@@ -1,0 +1,103 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "confident",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "confident",
+			"text": "Ah, Okay then! We're serving three choices today: strawberry sorbet, Scarlet Devil's flan and Red Velvet cake. Which would you like?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": ""
+		},
+		{
+			"choice": "Sorbet",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Flan",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "Cake",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "I mustn't fall to temptation yet...!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "nervous",
+			"text": "I-I'm sorry... I didn't mean to be presump-p-ptuous or f-forceful..."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636911767.json",
+		"name": "Shygirldessertget"
+	}
+}

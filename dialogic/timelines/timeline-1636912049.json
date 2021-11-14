@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "confident",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "I-I'm sorry, we only offer one dessert per rider."
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "nervous",
+			"text": "...p-p-please don't be angry."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636912049.json",
+		"name": "Shygirl2"
+	}
+}
