@@ -1,0 +1,189 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://entities/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Background1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Car1.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 126, 11 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 24, 9.5 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 24, 13.25 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 16, 13.25 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 3, 32.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 16, 9.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 12, 11.75 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Environment:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "shake"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Environment:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 2, -2, 0.5 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -1 ), Vector2( 0, 1 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxLayer:motion_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "scroll"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxLayer:motion_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -16, 0 ) ]
+}
+
+[node name="Node" type="Node"]
+
+[node name="Gameplay" type="Node2D" parent="."]
+
+[node name="Environment" type="Node2D" parent="Gameplay"]
+
+[node name="Car1" type="Sprite" parent="Gameplay/Environment"]
+position = Vector2( 0, 7 )
+texture = ExtResource( 3 )
+
+[node name="Walls" type="StaticBody2D" parent="Gameplay/Environment"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 0, -21.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 0, 62 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( -108, -4.5 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 108, -4.5 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( -56, -4 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 56, -4 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( -56, 40.75 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 56, 41 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 0, 40.75 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( -123, 18.5 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 123, 18 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 0, -4 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( -108, 39.25 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( 108, 39 )
+shape = SubResource( 12 )
+
+[node name="Player" parent="Gameplay/Environment/Walls/CollisionShape2D14" instance=ExtResource( 1 )]
+position = Vector2( -196, -24 )
+
+[node name="Camera2D" type="Camera2D" parent="Gameplay"]
+current = true
+zoom = Vector2( 0.133, 0.133 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Gameplay"]
+autoplay = "shake"
+anims/RESET = SubResource( 3 )
+anims/shake = SubResource( 4 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 16, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 2 )
+vframes = 4
+region_enabled = true
+region_rect = Rect2( 0, 0, 640, 576 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground"]
+autoplay = "scroll"
+anims/RESET = SubResource( 1 )
+anims/scroll = SubResource( 2 )
