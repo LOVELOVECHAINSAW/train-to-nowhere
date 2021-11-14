@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 16 )
+extents = Vector2( 8, 8 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "standing_up"
@@ -35,10 +35,13 @@ resource_name = "walk_up"
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( -1.90735e-06, 4.76837e-07 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -52,3 +55,8 @@ anims/walk_down = SubResource( 4 )
 anims/walk_left = SubResource( 5 )
 anims/walk_right = SubResource( 6 )
 anims/walk_up = SubResource( 7 )
+
+[node name="HeldPosition" type="Position2D" parent="."]
+position = Vector2( 0, -16 )
+
+[node name="HeldItems" type="Node2D" parent="."]

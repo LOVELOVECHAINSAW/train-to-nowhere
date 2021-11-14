@@ -43,11 +43,6 @@ _global_script_classes=[ {
 "class": "DialogicUtil",
 "language": "GDScript",
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
-}, {
-"base": "Node",
-"class": "Item",
-"language": "GDScript",
-"path": "res://entities/Item.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
@@ -56,8 +51,7 @@ _global_script_class_icons={
 "DialogicBackgroundMusic": "",
 "DialogicDefinitionsUtil": "",
 "DialogicResources": "",
-"DialogicUtil": "",
-"Item": ""
+"DialogicUtil": ""
 }
 
 [application]
