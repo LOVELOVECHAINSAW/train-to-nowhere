@@ -55,6 +55,10 @@ run/main_scene="res://scenes/levels/Level1.tscn"
 run/flush_stdout_on_print=true
 config/icon="res://icon.png"
 
+[autoload]
+
+Map="*res://scenes/levels/Map.gd"
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )

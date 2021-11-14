@@ -50,3 +50,5 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Door" to="Door" method="_on_Door_body_entered"]
