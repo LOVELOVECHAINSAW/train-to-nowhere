@@ -1,0 +1,33 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My son, an artist… though far from a lamentable profession I cannot help but feel a little empty. Just imagine how he could have advanced the sciences…"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636910018.json",
+		"name": "Dadartsuccess"
+	}
+}
