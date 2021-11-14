@@ -1,0 +1,51 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636906785.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "calm",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636906785.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "If you ask me, you should just help the damn kid with math."
+		},
+		{
+			"character": "character-1636906785.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "It's way easier than having to interpret colour descriptions! You just need to use basic mathematics skills."
+		},
+		{
+			"character": "character-1636906785.json",
+			"event_id": "dialogic_001",
+			"portrait": "angry",
+			"text": "...unless you're so bad at math that you can't even do BASIC PEDMAS!"
+		},
+		{
+			"character": "character-1636906785.json",
+			"event_id": "dialogic_001",
+			"portrait": "calm",
+			"text": "*ahem*, my apologies... bad memories from tutoring rugrats."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636910850.json",
+		"name": "Dickgirlcart3advice"
+	}
+}

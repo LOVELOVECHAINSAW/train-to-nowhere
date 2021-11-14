@@ -1,0 +1,60 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636908463.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636908463.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don’t know what colours to use for my painting… can you help me please?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": ""
+		},
+		{
+			"choice": "Sure thing.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_timeline": "",
+			"event_id": "dialogic_020"
+		},
+		{
+			"choice": "I'm no artist.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636910457.json",
+		"name": "Sonartevent"
+	}
+}

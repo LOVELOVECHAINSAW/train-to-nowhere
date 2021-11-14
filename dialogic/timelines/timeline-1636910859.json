@@ -1,0 +1,57 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "confident",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Helping him with colours sounds fun! Picking which palette to use is important to learn too."
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "Between picking warm colours like red and yellow or cool colours like blue and green... choosing which type forms a majority of your palette sets the tone for the entire work."
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "confident",
+			"text": "O-or you could use all the colours of the rainbow! Red, orange, green..."
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "nervous",
+			"text": "E-erm no, red, orange, b-blue..."
+		},
+		{
+			"character": "character-1636906786.json",
+			"event_id": "dialogic_001",
+			"portrait": "(Don't change)",
+			"text": "O-oh n-no... what w-were the colours again...! The acronym's ROYGBV... right?"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636910859.json",
+		"name": "Shygirlcart3advice"
+	}
+}
