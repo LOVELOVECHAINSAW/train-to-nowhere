@@ -151,7 +151,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( -16, 0 ) ]
 }
 
-[node name="Node" type="Node"]
+[node name="Car1" type="Node"]
 
 [node name="Gameplay" type="Node2D" parent="."]
 
