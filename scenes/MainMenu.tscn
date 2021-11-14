@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/GameGirl.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/MainMenu.gd" type="Script" id=2]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 1 )
+/fonts/Default = null
+
+[node name="MainMenu" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_left = 384.0
+margin_top = 471.0
+margin_right = 1536.0
+margin_bottom = 538.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+text = "A Train to Nowhere"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_left = 794.0
+margin_top = 542.0
+margin_right = 1126.0
+margin_bottom = 615.0
+size_flags_horizontal = 4
+size_flags_vertical = 2
+text = "Start"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
