@@ -109,8 +109,8 @@ stretch_mode = 5
 [node name="Title" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -500.0
-margin_right = 500.0
+margin_left = 460.0
+margin_right = 1460.0
 margin_bottom = 477.0
 texture = ExtResource( 5 )
 stretch_mode = 1
