@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://entities/Door.gd" type="Script" id=1]
 [ext_resource path="res://assets/Door.png" type="Texture" id=2]
 [ext_resource path="res://assets/Audio/doorOpen_2.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/Audio/doorClose_1.ogg" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2.25, 17 )
@@ -24,7 +25,11 @@ position = Vector2( 5, 0 )
 texture = ExtResource( 2 )
 vframes = 2
 
-[node name="Sound" type="AudioStreamPlayer" parent="."]
+[node name="OpenSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+
+[node name="LockedSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -13.0
 
 [connection signal="body_entered" from="." to="." method="_on_Door_body_entered"]

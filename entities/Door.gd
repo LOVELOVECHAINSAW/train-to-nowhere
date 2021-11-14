@@ -8,14 +8,14 @@ export(bool) var locked: bool setget _set_locked
 
 func _on_Door_body_entered(_body) -> void:
 	if locked:
-		print("Locked")
+		$LockedSound.play()
 	else:
 # warning-ignore:return_value_discarded
 		get_tree().change_scene_to(Map.room[leads_to])
 
 func _set_locked(is_locked: bool) -> void:
 	if not is_locked:
-		$Sound.play()
+		$OpenSound.play()
 		$Sprite.frame = 1
 	else:
 		$Sprite.frame = 0
