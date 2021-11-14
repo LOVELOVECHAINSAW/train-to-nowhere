@@ -6,8 +6,9 @@ export(rooms) onready var leads_to: int
 export(bool) var locked: bool
 
 
-func _on_Door_body_entered(body):
+func _on_Door_body_entered(_body):
 	if locked:
 		print("Locked")
 	else:
+# warning-ignore:return_value_discarded
 		get_tree().change_scene_to(Map.room[leads_to])

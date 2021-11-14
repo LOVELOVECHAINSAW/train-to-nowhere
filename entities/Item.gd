@@ -11,6 +11,7 @@ func _on_Item_body_entered(body: Node):
 		body.set_item(self)
 
 
-func _on_Item_body_exited(body):
+func _on_Item_body_exited(_body):
+# warning-ignore:return_value_discarded
 	connect("body_entered", self, "_on_Item_body_entered")
 	disconnect("body_exited", self, "_on_Item_body_exited")

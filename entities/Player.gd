@@ -16,6 +16,7 @@ func _drop_item() -> void:
 	$HeldItems.remove_child(item)
 	get_parent().call_deferred("add_child", item)
 
+# warning-ignore:return_value_discarded
 	item.connect("body_exited", item, "_on_Item_body_exited")
 	item.global_position = self.global_position
 	item = null
