@@ -2,7 +2,7 @@ extends Area2D
 
 onready var sprite: Sprite = $Sprite
 
-var item_name: String = "item"
+export(String) var id: String = ""
 
 func _on_Item_body_entered(body: Node):
 	if body.is_in_group("player"):

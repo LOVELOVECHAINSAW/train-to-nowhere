@@ -13,6 +13,8 @@ func _unhandled_key_input(_event):
 		_drop_item()
 
 func _drop_item() -> void:
+	# Bug, possible to call function _drop_item while the item is orphan,
+	# because of call_deferred.
 	$HeldItems.remove_child(item)
 	get_parent().call_deferred("add_child", item)
 
@@ -53,10 +55,10 @@ func set_animation() -> void:
 			animation = "" # We can give a proper animation name later
 
 func set_item(new_item: Node) -> void:
-	item = new_item
+	if item:
+		_drop_item()
 
-	for held_item in $HeldItems.get_children():
-		held_item.queue_free()
+	item = new_item
 
 	# Deferred because adding and removing children can't be done while
 	# flushing queries

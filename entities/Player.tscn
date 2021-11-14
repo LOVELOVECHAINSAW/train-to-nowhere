@@ -34,6 +34,8 @@ resource_name = "walk_right"
 resource_name = "walk_up"
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -60,3 +62,7 @@ anims/walk_up = SubResource( 7 )
 position = Vector2( 0, -16 )
 
 [node name="HeldItems" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
