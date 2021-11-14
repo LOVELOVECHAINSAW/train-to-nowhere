@@ -1,11 +1,11 @@
 {
-	"color": "#ffe20e0e",
+	"color": "#ff28e94b",
 	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
-	"id": "character-1636828905.json",
+	"id": "character-1636906785.json",
 	"mirror_portraits": false,
-	"name": "Conductor",
+	"name": "Green-haired Attendant",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -16,12 +16,12 @@
 			"path": ""
 		},
 		{
-			"name": "standard",
-			"path": "res://conductor_think.png"
+			"name": "calm",
+			"path": "res://assistant1_calm.png"
 		},
 		{
-			"name": "potemkinbusta",
-			"path": "res://conductor_lean.png"
+			"name": "angry",
+			"path": "res://assistant1_angry.png"
 		}
 	],
 	"scale": 100

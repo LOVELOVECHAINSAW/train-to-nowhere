@@ -1,11 +1,11 @@
 {
-	"color": "#ffe20e0e",
+	"color": "#ff092e7c",
 	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
-	"id": "character-1636828905.json",
+	"id": "character-1636908107.json",
 	"mirror_portraits": false,
-	"name": "Conductor",
+	"name": "Father",
 	"nickname": "",
 	"nickname_bool": false,
 	"offset_x": 0,
@@ -14,14 +14,6 @@
 		{
 			"name": "Default",
 			"path": ""
-		},
-		{
-			"name": "standard",
-			"path": "res://conductor_think.png"
-		},
-		{
-			"name": "potemkinbusta",
-			"path": "res://conductor_lean.png"
 		}
 	],
 	"scale": 100

@@ -1,0 +1,51 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I’m blessed to have such a brilliant son… he has it in him to become one of the greats in the hard sciences."
+		},
+		{
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "With his aptitude for mathematics he could do anything! Physics, engineering, you name it."
+		},
+		{
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As his parent, I would be neglecting my duties if I didn’t nurture his talent. You agree too, no?"
+		},
+		{
+			"character": "character-1636908107.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He’s doing his homework right now, perhaps assisting him in math would be a good idea…"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636908147.json",
+		"name": "Dadintro"
+	}
+}

@@ -1,0 +1,140 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1636908463.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1636908463.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My math homework’s kinda hard… can you help me please?"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": ""
+		},
+		{
+			"choice": "Sure, I'll help.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1636908463.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks! Here's the first question:"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "1 + 9 - 7 =?"
+		},
+		{
+			"choice": "4",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "6",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "3",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1636908463.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That seems right! Here's the second one:"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "6 * 4 = ?"
+		},
+		{
+			"choice": "18",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "24",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "27x - 44 = 10, find x."
+		},
+		{
+			"choice": "12",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"choice": "I don't have time.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1636908537.json",
+		"name": "timeline-1636908537"
+	}
+}

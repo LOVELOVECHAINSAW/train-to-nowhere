@@ -1,0 +1,31 @@
+{
+	"glossary": [
+
+	],
+	"variables": [
+		{
+			"id": "1636907562-787",
+			"name": "introflag2",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1636907561-648",
+			"name": "introflag",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1636908069-366",
+			"name": "Dadrepeat",
+			"type": 0,
+			"value": ""
+		},
+		{
+			"id": "1636908071-146",
+			"name": "Momrepeat",
+			"type": 0,
+			"value": ""
+		}
+	]
+}
