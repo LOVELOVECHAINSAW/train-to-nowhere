@@ -9,11 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node",
-"class": "Character",
-"language": "GDScript",
-"path": "res://scenes/Character.gd"
-}, {
 "base": "Reference",
 "class": "DTS",
 "language": "GDScript",
@@ -45,7 +40,6 @@ _global_script_classes=[ {
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
 } ]
 _global_script_class_icons={
-"Character": "",
 "DTS": "",
 "Dialogic": "",
 "DialogicBackgroundMusic": "",
@@ -57,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Train To Nowhere"
-run/main_scene="res://scenes/levels/Intro.tscn"
+run/main_scene="res://scenes/levels/Level1.tscn"
 run/flush_stdout_on_print=true
 config/icon="res://icon.png"
 
