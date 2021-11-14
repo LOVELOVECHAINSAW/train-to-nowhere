@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 8 )
+extents = Vector2( 7, 7 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "standing_up"
@@ -62,7 +62,3 @@ anims/walk_up = SubResource( 7 )
 position = Vector2( 0, -16 )
 
 [node name="HeldItems" type="Node2D" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.5, 0.5 )
