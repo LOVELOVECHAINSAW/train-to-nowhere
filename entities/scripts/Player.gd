@@ -22,7 +22,7 @@ func _drop_item() -> void:
 	item.connect("body_exited", item, "_on_Item_body_exited")
 	item.global_position = self.global_position
 	item = null
-	
+
 	$Drop.play()
 
 func _physics_process(_delta) -> void:
@@ -46,12 +46,12 @@ func set_animation() -> void:
 			$Sprite.flip_h = true
 		Vector2.RIGHT:
 			$Sprite.flip_h = false
-	
+
 	if velocity != Vector2.ZERO:
 		animation = "walk"
 	else:
 		animation = "idle"
-	
+
 	if item:
 		match animation:
 			"walk":
