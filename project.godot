@@ -57,7 +57,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Map="*res://scenes/levels/Map.gd"
+Map="*res://scenes/Map.gd"
 
 [display]
 

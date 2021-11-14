@@ -17,11 +17,11 @@
 		},
 		{
 			"name": "confident",
-			"path": "res://assistant2_confident.png"
+			"path": "res://assets/dialogue/assistant2_confident.png"
 		},
 		{
 			"name": "nervous",
-			"path": "res://assistant2_nervous.png"
+			"path": "res://assets/dialogue/assistant2_nervous.png"
 		}
 	],
 	"scale": 100

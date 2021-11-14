@@ -17,11 +17,11 @@
 		},
 		{
 			"name": "calm",
-			"path": "res://assistant1_calm.png"
+			"path": "res://assets/dialogue/assistant1_calm.png"
 		},
 		{
 			"name": "angry",
-			"path": "res://assistant1_angry.png"
+			"path": "res://assets/dialogue/assistant1_angry.png"
 		}
 	],
 	"scale": 100

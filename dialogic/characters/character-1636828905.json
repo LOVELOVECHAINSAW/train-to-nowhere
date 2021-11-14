@@ -17,11 +17,11 @@
 		},
 		{
 			"name": "standard",
-			"path": "res://conductor_think.png"
+			"path": "res://assets/dialogue/conductor_think.png"
 		},
 		{
 			"name": "potemkinbusta",
-			"path": "res://conductor_lean.png"
+			"path": "res://assets/dialogue/conductor_lean.png"
 		}
 	],
 	"scale": 100
