@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/sprites/Container.png" type="Texture" id=1]
+[ext_resource path="res://assets/sprites/Bubble.png" type="Texture" id=2]
+[ext_resource path="res://entities/scripts/Container.gd" type="Script" id=3]
+[ext_resource path="res://assets/audio/clothBelt2.ogg" type="AudioStream" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9, 9 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Bubble"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BubbleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("BubbleSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[node name="Container" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ContainerSprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 2
+vframes = 3
+
+[node name="BubbleSprite" type="Sprite" parent="."]
+position = Vector2( 0, -17 )
+texture = ExtResource( 2 )
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Bubble"
+anims/Bubble = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -16.605
+
+[connection signal="body_entered" from="." to="." method="_on_Container_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Container_body_exited"]

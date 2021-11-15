@@ -141,8 +141,7 @@ script = ExtResource( 1 )
 position = Vector2( 0, -9 )
 texture = ExtResource( 2 )
 hframes = 4
-vframes = 10
-frame = 2
+vframes = 18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
@@ -158,12 +157,6 @@ anims/walk_hold = SubResource( 6 )
 position = Vector2( 0, -20 )
 
 [node name="HeldItems" type="Node2D" parent="."]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.1, 0.1 )
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
 
 [node name="Footstep1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

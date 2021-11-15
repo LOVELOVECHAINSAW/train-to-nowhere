@@ -27,6 +27,7 @@ vframes = 2
 
 [node name="OpenSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -20.101
 
 [node name="LockedSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

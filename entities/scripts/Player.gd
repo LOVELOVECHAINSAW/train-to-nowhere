@@ -40,6 +40,16 @@ func set_velocity() -> void:
 	velocity.y = Input.get_action_strength("ui_down") -\
 			Input.get_action_strength("ui_up")
 
+func set_processes(paused: bool) -> void:
+	set_process(paused)
+	set_physics_process(paused)
+	set_process_unhandled_key_input(paused)
+
+	if item:
+		$AnimationPlayer.play("idle_hold")
+	else:
+		$AnimationPlayer.play("idle")
+
 func set_animation() -> void:
 	match velocity:
 		Vector2.LEFT:

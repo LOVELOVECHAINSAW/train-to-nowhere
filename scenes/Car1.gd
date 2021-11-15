@@ -3,7 +3,7 @@ extends Node
 var dialogue: Node
 
 func _ready():
-	play_dialogue("Dickgirl1") # Example, remove
+	emit_signal("ready")
 
 func play_dialogue(sequence: String) -> void:
 	dialogue = Dialogic.start(sequence)

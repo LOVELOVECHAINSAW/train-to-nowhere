@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sprites/Items.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends \"res://entities/scripts/Item.gd\"
+
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[node name="Item" type="Area2D" groups=["items"]]
+script = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+id = "key"
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 4.76837e-07 )
+texture = ExtResource( 1 )
+hframes = 22
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Item_body_entered"]
