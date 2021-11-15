@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Train To Nowhere"
-run/main_scene="res://scenes/Car1.tscn"
+run/main_scene="res://scenes/MainMenu.tscn"
 run/flush_stdout_on_print=true
 config/icon="res://icon.png"
 
