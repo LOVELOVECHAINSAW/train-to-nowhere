@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Passion.ogg-24286d4d81df5bf7984552567065e92a.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/Passion.ogg"
+dest_files=[ "res://.import/Passion.ogg-24286d4d81df5bf7984552567065e92a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

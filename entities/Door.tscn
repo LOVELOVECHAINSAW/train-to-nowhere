@@ -27,10 +27,10 @@ vframes = 2
 
 [node name="OpenSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = -20.101
+volume_db = -27.093
 
 [node name="LockedSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = -13.0
+volume_db = -23.487
 
 [connection signal="body_entered" from="." to="." method="_on_Door_body_entered"]

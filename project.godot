@@ -58,6 +58,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Map="*res://scenes/Map.gd"
+Music="*res://entities/scripts/Music.gd"
 
 [display]
 
