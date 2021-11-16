@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/audio/dropLeather.ogg" type="AudioStream" id=8]
 [ext_resource path="res://assets/audio/beltHandle2.ogg" type="AudioStream" id=9]
 [ext_resource path="res://entities/Door.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/Car1.gd" type="Script" id=11]
+[ext_resource path="res://scenes/scripts/Car1.gd" type="Script" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 126, 11 )
@@ -22,7 +22,7 @@ extents = Vector2( 12, 10 )
 extents = Vector2( 24, 9.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 23.9996, 13.331 )
+extents = Vector2( 24, 14.5 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 16, 13.25 )
@@ -34,7 +34,7 @@ extents = Vector2( 7, 32.5 )
 extents = Vector2( 16, 9.5 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 12, 11.7426 )
+extents = Vector2( 12, 11.5 )
 
 [sub_resource type="Animation" id=9]
 length = 0.001
@@ -212,8 +212,7 @@ __meta__ = {
 
 [node name="Walls" type="StaticBody2D" parent="Gameplay/Environment"]
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
@@ -241,11 +240,11 @@ position = Vector2( 56, -4 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
-position = Vector2( -56, 40.75 )
+position = Vector2( -56, 42 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
-position = Vector2( 56, 41 )
+position = Vector2( 56, 42 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
@@ -264,12 +263,12 @@ shape = SubResource( 6 )
 position = Vector2( 0, -4 )
 shape = SubResource( 7 )
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
-position = Vector2( -108, 39.25 )
-shape = SubResource( 8 )
-
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 108, 39 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
+position = Vector2( -108, 39 )
 shape = SubResource( 8 )
 
 [node name="Entities" type="Node2D" parent="Gameplay/Environment"]
@@ -287,9 +286,7 @@ position = Vector2( 24, 24 )
 position = Vector2( -117, 4.5 )
 locked = true
 
-[node name="Door2" parent="Gameplay/Environment/Entities" groups=[
-"exit",
-] instance=ExtResource( 10 )]
+[node name="Door2" parent="Gameplay/Environment/Entities" groups=["exit"] instance=ExtResource( 10 )]
 position = Vector2( 117, 4.5 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
@@ -307,13 +304,11 @@ __meta__ = {
 position = Vector2( 77, 65 )
 texture = ExtResource( 6 )
 hframes = 3
-frame = 2
 
 [node name="Sprite2" type="Sprite" parent="Gameplay/Environment/CarFront"]
 position = Vector2( -77, 65 )
 texture = ExtResource( 6 )
 hframes = 3
-frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gameplay/Environment/CarFront"]
 autoplay = "tracks"
