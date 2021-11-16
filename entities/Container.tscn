@@ -52,7 +52,7 @@ shape = SubResource( 1 )
 
 [node name="ContainerSprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
-hframes = 2
+hframes = 4
 vframes = 3
 
 [node name="BubbleSprite" type="Sprite" parent="."]

@@ -15,15 +15,19 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+requires_key = true
+locked = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.25, 0 )
 shape = SubResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Door" type="Sprite" parent="."]
 position = Vector2( 5, 0 )
 texture = ExtResource( 2 )
+hframes = 2
 vframes = 2
+frame = 1
 
 [node name="OpenSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
