@@ -8,7 +8,7 @@
 [ext_resource path="res://assets/audio/dropLeather.ogg" type="AudioStream" id=6]
 [ext_resource path="res://assets/audio/beltHandle2.ogg" type="AudioStream" id=7]
 [ext_resource path="res://entities/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/Car2.gd" type="Script" id=9]
+[ext_resource path="res://scenes/scripts/Car0.gd" type="Script" id=9]
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/sprites/CarInactive.png" type="Texture" id=11]
 [ext_resource path="res://entities/Container.tscn" type="PackedScene" id=12]
@@ -199,7 +199,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( -16, 0 ) ]
 }
 
-[node name="Car2" type="Node"]
+[node name="Car0" type="Node"]
 script = ExtResource( 9 )
 
 [node name="Gameplay" type="Node2D" parent="."]
@@ -298,6 +298,7 @@ position = Vector2( -85, 18 )
 
 [node name="Container" parent="Gameplay/Environment/Entities" instance=ExtResource( 12 )]
 position = Vector2( 24, -8 )
+type = 4
 containing_item = ExtResource( 1 )
 
 [node name="CarFront" type="Sprite" parent="Gameplay/Environment"]

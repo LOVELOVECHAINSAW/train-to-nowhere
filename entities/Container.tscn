@@ -54,6 +54,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 1 )
 hframes = 2
 vframes = 3
+frame = 2
 
 [node name="BubbleSprite" type="Sprite" parent="."]
 position = Vector2( 0, -17 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/GameGirl.tres" type="DynamicFont" id=1]
-[ext_resource path="res://scenes/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://scenes/scripts/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://assets/menu/MenuStart.png" type="Texture" id=3]
 [ext_resource path="res://assets/menu/MenuBG.png" type="Texture" id=4]
 [ext_resource path="res://assets/menu/MenuTitle.png" type="Texture" id=5]

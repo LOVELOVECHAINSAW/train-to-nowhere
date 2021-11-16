@@ -1,17 +1,23 @@
 extends Area2D
 
+enum CONTAINER_TYPE {SUITCASE = 0, LOCKED_DRAWER = 2, DRAWER = 4}
+
 var opened := false setget set_opened
 var player: Node
+export(CONTAINER_TYPE) var type: int
 export(PackedScene) var containing_item: PackedScene
+
+func _ready():
+	$ContainerSprite.frame = type
 
 ## Sets the visuals accordingly
 func set_opened(is_opened: bool) -> void:
 	$BubbleSprite.set_visible(not is_opened)
 
 	if is_opened:
-		$ContainerSprite.frame = 1
+		$ContainerSprite.frame = type + 1
 	else:
-		$ContainerSprite.frame = 0
+		$ContainerSprite.frame = type
 
 	opened = is_opened
 
