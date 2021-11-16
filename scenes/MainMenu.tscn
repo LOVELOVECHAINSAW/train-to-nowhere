@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/GameGirl.tres" type="DynamicFont" id=1]
-[ext_resource path="res://scenes/scripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://scenes/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://assets/menu/MenuStart.png" type="Texture" id=3]
 [ext_resource path="res://assets/menu/MenuBG.png" type="Texture" id=4]
 [ext_resource path="res://assets/menu/MenuTitle.png" type="Texture" id=5]
@@ -63,16 +63,16 @@ tracks/0/keys = {
 "values": [ Vector2( 460, 30 ), Vector2( 460, 55 ), Vector2( 460, 30 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Start:modulate")
+tracks/1/path = NodePath("Start:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5 ),
-"transitions": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ) ]
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true, false ]
 }
 
 [node name="MainMenu" type="Control"]
@@ -105,13 +105,17 @@ margin_right = 822.0
 margin_bottom = 312.0
 texture = SubResource( 2 )
 stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Title" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -500.0
+margin_top = 35.2217
 margin_right = 500.0
-margin_bottom = 477.0
+margin_bottom = 512.257
 texture = ExtResource( 5 )
 stretch_mode = 1
 __meta__ = {
@@ -119,6 +123,7 @@ __meta__ = {
 }
 
 [node name="Start" type="TextureRect" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5

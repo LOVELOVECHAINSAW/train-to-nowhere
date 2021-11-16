@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/sprites/Car1.png" type="Texture" id=1]
-[ext_resource path="res://scenes/scripts/Car2.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Car2.gd" type="Script" id=2]
 [ext_resource path="res://assets/sprites/Background1.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/Car1-front.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/Tracks.png" type="Texture" id=5]
@@ -12,31 +12,31 @@
 [ext_resource path="res://entities/Player.tscn" type="PackedScene" id=10]
 [ext_resource path="res://entities/items/Item.tscn" type="PackedScene" id=11]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 126, 11 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12, 10 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 24, 9.5 )
 
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 24, 13.25 )
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 24, 13.302 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 16, 13.25 )
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 3, 32.5 )
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 7, 32.5 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 16, 9.5 )
 
-[sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 12, 11.75 )
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 12, 11.7358 )
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=9]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -63,9 +63,9 @@ tracks/1/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=10]
 resource_name = "tracks"
-length = 0.6
+length = 0.3
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -74,7 +74,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2 ]
@@ -86,13 +86,13 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
+"times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=11]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Environment:position")
@@ -107,8 +107,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "shake"
+[sub_resource type="Animation" id=12]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -166,7 +165,7 @@ tracks/3/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=13]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("ParallaxLayer:motion_offset")
@@ -181,8 +180,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "scroll"
+[sub_resource type="Animation" id=14]
 length = 0.2
 loop = true
 tracks/0/type = "value"
@@ -213,7 +211,6 @@ __meta__ = {
 }
 
 [node name="Walls" type="StaticBody2D" parent="Gameplay/Environment"]
-visible = false
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -221,73 +218,64 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 0, -21.5 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 0, 62 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( -108, -4.5 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 108, -4.5 )
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( -56, -4 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 56, -4 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( -56, 40.75 )
-shape = SubResource( 8 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 56, 41 )
-shape = SubResource( 8 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 0, 40.75 )
-shape = SubResource( 9 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( -123, 18.5 )
-shape = SubResource( 10 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 123, 18 )
-shape = SubResource( 10 )
+shape = SubResource( 6 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 0, -4 )
-shape = SubResource( 11 )
+shape = SubResource( 7 )
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( -108, 39.25 )
-shape = SubResource( 12 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Gameplay/Environment/Walls"]
 position = Vector2( 108, 39 )
-shape = SubResource( 12 )
+shape = SubResource( 8 )
 
 [node name="Entities" type="Node2D" parent="Gameplay/Environment"]
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="Door" parent="Gameplay/Environment/Entities" instance=ExtResource( 9 )]
-position = Vector2( -117, 0.5 )
-locked = true
-
-[node name="Door2" parent="Gameplay/Environment/Entities" groups=["exit"] instance=ExtResource( 9 )]
-position = Vector2( 117, 0.5 )
-scale = Vector2( -1, 1 )
-locked = true
 
 [node name="Player" parent="Gameplay/Environment/Entities" instance=ExtResource( 10 )]
 position = Vector2( -85, 18 )
@@ -295,8 +283,20 @@ position = Vector2( -85, 18 )
 [node name="Item" parent="Gameplay/Environment/Entities" instance=ExtResource( 11 )]
 position = Vector2( -27, 15 )
 
+[node name="Door" parent="Gameplay/Environment/Entities" instance=ExtResource( 9 )]
+position = Vector2( -117, 4.5 )
+locked = true
+
+[node name="Door2" parent="Gameplay/Environment/Entities" groups=[
+"exit",
+] instance=ExtResource( 9 )]
+position = Vector2( 117, 4.5 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+locked = true
+
 [node name="CarFront" type="Sprite" parent="Gameplay/Environment"]
-position = Vector2( 0, 47 )
+position = Vector2( 0, 8 )
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true,
@@ -304,19 +304,21 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Gameplay/Environment/CarFront"]
-position = Vector2( 77, 26 )
+position = Vector2( 77, 65 )
 texture = ExtResource( 5 )
 hframes = 3
+frame = 2
 
 [node name="Sprite2" type="Sprite" parent="Gameplay/Environment/CarFront"]
-position = Vector2( -77, 26 )
+position = Vector2( -77, 65 )
 texture = ExtResource( 5 )
 hframes = 3
+frame = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gameplay/Environment/CarFront"]
 autoplay = "tracks"
-anims/RESET = SubResource( 13 )
-anims/tracks = SubResource( 14 )
+anims/RESET = SubResource( 9 )
+anims/tracks = SubResource( 10 )
 
 [node name="Camera2D" type="Camera2D" parent="Gameplay"]
 current = true
@@ -338,8 +340,8 @@ volume_db = -20.636
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Gameplay"]
 autoplay = "shake"
-anims/RESET = SubResource( 3 )
-anims/shake = SubResource( 4 )
+anims/RESET = SubResource( 11 )
+anims/shake = SubResource( 12 )
 
 [node name="Dialogue" type="CanvasLayer" parent="."]
 
@@ -356,5 +358,5 @@ region_rect = Rect2( 0, 0, 640, 576 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground"]
 autoplay = "scroll"
-anims/RESET = SubResource( 1 )
-anims/scroll = SubResource( 2 )
+anims/RESET = SubResource( 13 )
+anims/scroll = SubResource( 14 )
